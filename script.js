@@ -37,7 +37,9 @@ function drawFood() {
 // Capturar o teclado
 document.addEventListener('keydown', update);
 
+// ******************************************* //
 // Função de Mudança de direção com o teclado
+// ******************************************* //
 function update(event) {
     if(event.keyCode == 37 && direction != "right") direction = "left";
     if(event.keyCode == 40 && direction != "down") direction = "up";
@@ -63,7 +65,7 @@ function iniciarJogo() {
             // console.log(`Snake[0]=${snake[0].y} e Snake[i]=${snake[i].y}`);
             console.log("GAME OVER :(");
             console.log(`Você marcou ${snake.length} pontos`);
-            alert("GAME OVER :(");
+            alert(`GAME OVER :(. Você marcou ${snake.length} pontos`);
 
             clearInterval(jogo);       
         }
