@@ -4,20 +4,20 @@ let box = 20;
 let snake = [];
 let direction = "right";
 let food = {
-    x: Math.floor((Math.random() * 20) + 1) * box,
-    y: Math.floor((Math.random() * 30) + 1) * box
+    x: Math.floor((Math.random() * 10) + 1) * box,
+    y: Math.floor((Math.random() * 10) + 1) * box
 };
 
 snake[0]= {
     x: 10 * box,
-    y: 15 * box
+    y: 10 * box
 };
 
 
 // Função para criar o fundo
 function criarBG() {
     context.fillStyle = '#222';
-    context.fillRect(0, 0, 20 * box, 30 * box);
+    context.fillRect(0, 0, 20 * box, 20 * box);
 };
 
 // Função para criar a cobrinha
@@ -55,8 +55,8 @@ function iniciarJogo() {
     // Condições para manter a cobra dentro do "box"
     if(snake[0].x > 20 * box && direction == "right") snake[0].x = 0;
     if(snake[0].x < 0 && direction == "left") snake[0].x = 20 * box;
-    if(snake[0].y > 30 * box && direction == "up") snake[0].y = 0;
-    if(snake[0].y < 0 && direction == "down") snake[0].y = 30 * box;
+    if(snake[0].y > 20 * box && direction == "up") snake[0].y = 0;
+    if(snake[0].y < 0 && direction == "down") snake[0].y = 20 * box;
     
     // Função para ver se a cobra se choca com ela
     for(i = 1; i < snake.length; i++) {
@@ -88,8 +88,8 @@ function iniciarJogo() {
     if(snakeX != food.x || snakeY != food.y) {
         snake.pop();
     } else {
-        food.x = Math.floor((Math.random() * 15) + 1) * box;
-        food.y = Math.floor((Math.random() * 15) + 1) * box;
+        food.x = Math.floor((Math.random() * 10) + 1) * box;
+        food.y = Math.floor((Math.random() * 10) + 1) * box;
     };
 
     
@@ -104,7 +104,7 @@ function iniciarJogo() {
 }
 
 // Rodar o jogo a cada tempo milisegundos
-let jogo = setInterval(iniciarJogo, 150);
+let jogo = setInterval(iniciarJogo, 170);
 
 // ESC para parar o jogo
 document.addEventListener('keydown', verEsc);

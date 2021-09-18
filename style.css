@@ -32,7 +32,7 @@ h1 .game-over {
 main {
     padding: 1vh 0;
     /* border: #666 1px solid; */
-    width: 50vw;
+    /* min-width: 50vw; */
 
 }
 ul, li {
