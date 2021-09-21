@@ -1,15 +1,34 @@
-body{
-    margin: 0;
+
+/* RESET */
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    height: 95vh;
-    width: 100vw;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color:#444;
+    color: rgb(101, 218, 101);
+}
+
+.game{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color:#333;
-    color: rgb(52, 165, 52);
+    text-align: center;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.titulo {
+    /* height: 20%; */
+}
+
+#snake {
+    margin: 0 auto;
 }
 
 h1 {
@@ -18,16 +37,39 @@ h1 {
     text-transform: uppercase;
     font-size: 1.25em;
     letter-spacing: .3em;
-    text-align: center;
+    /* text-align: center; */
+    line-height: 2.5em;
 }
 
-h1 .game-over {
+.game-over {
     display: none;
+    border-radius: 10px;
+    background-color: #444;
+    width: 70%;
+    position: absolute;
+    top: 48vh;
+    left: 15vw;
+}
+
+.game-over-show {
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.game-over h1{
     font-weight: 400;
     letter-spacing: normal;
     font-size: 1.5em;
+    line-height: 2.5em;
 }
 
+.controls{
+    /* height: 20%; */
+    display: none;
+}
 
 main {
     padding: 1vh 0;
@@ -70,9 +112,23 @@ nav ul:nth-child(2) li {
     justify-content: center;
 }
 
-section {
+/* section {
     padding: 2vh 0;
     font-size: .8em;
     letter-spacing: .25em ;
-    /* border: #999 1px solid; */
+    border: #999 1px solid;
+} */
+
+@media(min-width: 550px){
+    .game{
+        height: 90%;
+    }
+
+    /* #snake {
+        width: 400px;
+    } */
 }
+
+/*@media() {
+    
+} */

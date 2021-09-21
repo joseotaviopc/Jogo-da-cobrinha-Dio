@@ -5,27 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
     <title>Jogo da Cobrinha</title>
 </head>
 <body>
-    <h1>Jogo da Cobrinha</h1>
-    <canvas id="snake" width="400" height="400">
-        <h1 class="game-over">Game Over :(</h1>
-    </canvas>
-    <main class="contols">
-        <!-- <h1>Controles</h1> -->
-        <nav>
-            <ul>
-                <li>Sobe</li>
-            </ul>
-            <ul>
-                <li>Esq</li>
-                <li>Desce</li>
-                <li>Dir</li>
-            </ul>
-        </nav>
-    </main>
-    <section class="help">Ajuda</section>
+    <div class="game">
+        <!-- TITULO -->
+        <div class="titulo">
+            <h1>Jogo da Cobrinha</h1>
+        </div>
+        <!-- JOGO -->
+        <canvas id="snake" width="400" height="400">   
+        </canvas>
+        <!-- CONTROLES -->
+        <main class="controls">
+            <!-- <h1>Controles</h1> -->
+            <nav>
+                <ul>
+                    <li>Sobe</li>
+                </ul>
+                <ul>
+                    <li>Esq</li>
+                    <li>Desce</li>
+                    <li>Dir</li>
+                </ul>
+            </nav>
+        </main>
+        <!-- <section class="help">Ajuda</section> -->
+    </div>
+    <div class="game-over">
+        <h1>Game Over :(</h1>
+    </div>
+    <script defer src="script.js"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@ let food = {
     x: Math.floor((Math.random() * 10) + 1) * box,
     y: Math.floor((Math.random() * 10) + 1) * box
 };
+let gameOver = document.querySelector('.game-over');
 
 snake[0]= {
     x: 10 * box,
@@ -65,7 +66,8 @@ function iniciarJogo() {
             // console.log(`Snake[0]=${snake[0].y} e Snake[i]=${snake[i].y}`);
             console.log("GAME OVER :(");
             console.log(`Você marcou ${snake.length} pontos`);
-            alert(`GAME OVER :(. Você marcou ${snake.length} pontos`);
+            // alert(`GAME OVER :(. Você marcou ${snake.length} pontos`);
+            gameOver.classList.add('game-over-show');
 
             clearInterval(jogo);       
         }
